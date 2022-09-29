@@ -29,7 +29,11 @@ const App = () => {
           <ContactForm handleClick={handleClick} />
         </div>
         <div className="container-data">
-          <Contact contacts={contacts} />
+           {contacts.map((contact, index) => {
+              return (
+                <Contact data={contact} index={index} />
+              )
+            })}
         </div>
       </div>
       
